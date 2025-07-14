@@ -1,0 +1,266 @@
+/* ========== Global Layout ========== */
+html, body {
+  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+#root {
+  width: 100%;
+}
+
+/* ========== Auth Components ========== */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #45a049;
+}
+
+.auth-container .toggle {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-container .toggle span {
+  color: #4caf50;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ========== General UI Elements ========== */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ========== Navigation Tabs ========== */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.nav-tabs button {
+  padding: 10px 20px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.nav-tabs button.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* ========== Logout Button ========== */
+.logout-button {
+  background-color: #e53935;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+/* ========== Project Form ========== */
+.project-form {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.project-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.project-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.project-form input[type="text"],
+.project-form input[type="date"],
+.project-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #333;
+}
+
+.project-form input[type="number"] {
+  max-width: 100px;
+}
+
+.project-form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-form button:hover {
+  background-color: #45a049;
+}
+
+.project-form .step-estimate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.project-form .step-estimate input {
+  margin-left: 10px;
+}
+
+/* ========== Project Card ========== */
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.step-list li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.step-completed {
+  color: green;
+  font-weight: bold;
+}
+
+.step-pending {
+  color: gray;
+}
+
+.step-current {
+  color: #2196f3;
+  font-weight: bold;
+}
+
+/* ========== Delete Button ========== */
+.delete-button {
+  background-color: #e53935;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
